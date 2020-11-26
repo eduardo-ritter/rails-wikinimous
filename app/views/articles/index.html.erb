@@ -1,0 +1,14 @@
+<%# MOSTRAR TODAS AS TAREFAS %>
+<p>All Articles:</p>
+<ul>
+  <% @articles.each do |article| %>
+    <li>
+      <%=article.id%>. <%= link_to article.title, article_path(article)%>
+
+    </li>
+  <% end %>
+</ul>
+<br>
+<small style="font-size: 10px; color: red">
+  <%= link_to "+ create article", article_path('new') %>
+</small>
